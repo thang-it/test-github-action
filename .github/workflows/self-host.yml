@@ -11,7 +11,4 @@ jobs:
     runs-on: [self-hosted]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-      - run: pm2 start index.js
+      - run: pm2 startOrRestart index.js
